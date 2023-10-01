@@ -1,0 +1,116 @@
+---
+import Card from './Card.astro';
+
+
+const categories = [
+    {
+        name: 'Finance',
+        color: 'text-fuchsia-300',
+        links: [
+            {
+                title: 'Dexscreener',
+                href: 'https://dexscreener.com'
+            },
+            {
+                title: 'Excel',
+                href: 'https://excel.com'
+            }
+        ]
+    },
+    {
+        name: 'Storage',
+        color: 'text-fuchsia-300',
+        links: [
+            {
+                title: 'Dropbox',
+                href: 'https://dropbox.com'
+            },
+            {
+                title: 'Photos App',
+                href: 'https://photosapp.com'
+            }
+        ]
+    },
+// Dev
+    {
+        name: 'Dev',
+        color: 'text-fuchsia-300',
+        links: [
+            {
+                title: 'GitHub',
+                href: 'https://github.com'
+            },
+            {
+                title: 'Codingame',
+                href: 'https://codingame.com'
+            },
+            {
+                title: 'Delioos',
+                href: 'https://delioos.xyz'
+            }
+        ]
+    },
+
+    // Design
+    {
+        name: 'Design',
+        color: 'text-fuchsia-300',
+        links: [
+            {
+                title: 'Behance',
+                href: 'https://behance.net'
+            },
+            {
+                title: 'Dribbble',
+                href: 'https://dribbble.com'
+            },
+            {
+                title: 'Figma',
+                href: 'https://figma.com'
+            },
+            {
+                title: 'Milanote',
+                href: 'https://milanote.com'
+            }
+        ]
+    },
+
+    // Social
+    {
+        name: 'Social',
+        color: 'text-fuchsia-300',
+        links: [
+            {
+                title: 'Twitter',
+                href: 'https://twitter.com'
+            },
+            {
+                title: 'Reddit',
+                href: 'https://reddit.com'
+            },
+            {
+                title: 'Instagram',
+                href: 'https://instagram.com'
+            },
+            {
+                title: 'YouTube',
+                href: 'https://youtube.com'
+            }
+        ]
+    }
+]
+---
+<div class="grid grid-cols-2 space-y-8">
+    {categories.map(category => (
+            <div class={category.color}>
+                <h2>{category.name}</h2>
+
+                <div class="flex flex-grow space-x-2.5 space-y-1">
+                {category.links.map(link => (
+                        <Card href={link.href} title={link.title} body=""/>
+                ))}
+                </div>
+
+            </div>
+    ))}
+</div>

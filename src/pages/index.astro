@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Categories from '../components/Categories.astro';
+---
+<Layout>
+    <div class="relative h-screen bg-cover bg-no-repeat bg-center " style={{backgroundImage: `url(/src/assets/gengar.jpg)`}}>
+
+        <div class="absolute inset-0 bg-black/50 bg-gradient-to-r from-violet-500 to-fuchsia-500 opacity-50"></div>
+
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
+            <h1 class="text-8xl text-white"> Roule's hub </h1>
+            <Categories/>
+        </div>
+
+        <!--  <div class="absolute bottom-20 left-1/2 -translate-x-1/2"  <div class="absolute bottom-20 left-1/2 -translate-x-1/2">>
+
+        </div> -->
+
+    </div>
+
+
+    <script>
+        document.addEventListener('astro:page-load', () => {
+            console.log('page loaded!')
+        })
+    </script>
+
+</Layout>
